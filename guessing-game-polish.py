@@ -1,8 +1,7 @@
 from random import randint
 import time
  
-print('[i] Coded by KBJay')
-print('----------')
+#Coded by KBJay')
 ls_poz = [1,2,3,4]           # Lista poziomow
 def menu():
     print('***MENU***')      # Menu poziomow
@@ -22,40 +21,47 @@ except ValueError:         							# Sprawdzenie czy wprowadzony poziom trudnosci
     print('----------')
     print('[!] Blad. Podaj liczbe z zakresu [1-4]')
    
-def Proby():              							# Funkcja odpowiadajaca za zgadywanie
-    x = 1                  							# X utworzony tylko po to, aby miec warunek w petli while
+def Proby():              							
+# Funkcja odpowiadajaca za zgadywanie
+    x = 1                  							
+# X utworzony tylko po to, aby miec warunek w petli while
     il_los = 0
     while x > 0:
-        los = input('Zgaduje ze to: ')   			# Uzytkownik zgaduje liczbe
-        il_los = int(il_los) +1          			# Licznik, pod koniec dzieki niemu, uzytkownik wie za ktorym razem trafil w wygrana liczbe
+        los = input('Zgaduje ze to: ')   			
+# Uzytkownik zgaduje liczbe
+        il_los = int(il_los) +1 
+# Licznik, pod koniec dzieki niemu, uzytkownik wie za ktorym razem trafil w wygrana liczbe
         print('----------')
        
-        try:               							# Weryfikacja czy liczba ktora uzytkownik podaje, jako prawdopodobna jest intem
+        try:
             los = int(los)
+# Weryfikacja czy liczba ktora uzytkownik podaje, jako prawdopodobna jest intem
  
-        except ValueError:							# Jesli uzytkownik jako prawdobna liczbe przykladowo tekst:
+        except ValueError:
             print('[!] Blad. Podaj liczbe z okreslonego wczesniej zakresu')
             print('')
             continue
+# Jesli uzytkownik jako prawdopodobna liczbe przykladowo tekst
        
-        if los < wynik:                            	# Jesli prawdopodbna liczba zdefiniowana przez uzytkownika jest mniejsza od tej wygranej:
+        if los < wynik:
             print('Za malo')
             print('')
             continue
+# Jesli prawdopodbna liczba zdefiniowana przez uzytkownika jest mniejsza od tej wygranej
            
-        if los > wynik:								# Jesli prawdopodbna liczba zdefiniowana przez uzytkownika jest wieksza od tej wygranej
+        if los > wynik:
             print('Za duzo')
             print('')
-            continue
-           
+            continue          
+# Jesli prawdopodbna liczba zdefiniowana przez uzytkownika jest wieksza od tej wygranej  
+ 
         if los == wynik and wybor != 4:
             print('Gratulacje udalo Ci sie! Byla to twoja ' + str(il_los) + ' proba. Sproboj jeszcze raz z trudniejszym poziomem')
-            
-         # Jesli prawdopodbna liczba zdefiniowana przez uzytkownika jest liczba wygrana: 
+# Jesli prawdopodbna liczba zdefiniowana przez uzytkownika jest liczba wygrana: 
          
         if los == wynik and wybor == 4:
             print('Wow. Jestes niesamowity, gratulacje, byla to twoja ' + str(il_los) + ' proba!')
-         # # Jesli prawdopodbna liczba zdefiniowana przez uzytkownika jest liczba wygrana, a poziom trudnosci jest ustawiony jako 'Koszmarny' 
+# Jesli prawdopodbna liczba zdefiniowana przez uzytkownika jest liczba wygrana, a poziom trudnosci jest ustawiony jako 'Koszmarny' 
         time.sleep(2)
         print('')
         exit()
