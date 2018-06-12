@@ -59,7 +59,7 @@ def Tries():
             continue
            
         if guess == win_number and selected_level != 4:
-# If the user won,and the difficulty level is not the hardest one, app is congratulating, saying which try it was, and suggesting to try higher difficulty level
+# If the user won, and the difficulty level is not the hardest one, app is congratulating, saying which try it was, and suggesting to try higher difficulty level
 
             print('Congratulations you win! It was your ' + str(cn_try) + ' try. Try again with higher difficulty level')
            
