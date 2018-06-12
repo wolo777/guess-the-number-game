@@ -1,7 +1,7 @@
 from random import randint
 import time
- 
-print('[i] Coded by KBJay')
+#Coded by KBJay
+
 print('----------')
 ls_poz = [1,2,3,4]           #lista poziomow
 def menu():
